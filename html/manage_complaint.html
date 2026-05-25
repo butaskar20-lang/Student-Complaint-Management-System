@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Complaint</title>
+
+  <link rel="stylesheet" href="../css/staffDashboardstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-page">
+
+<header class="topbar">
+
+  <div class="topbar-left">
+    <span class="welcome-msg">Manage Complaint</span>
+  </div>
+
+  <div class="topbar-center">
+    <div class="search-box">
+      <input type="text" id="searchComplaint" placeholder="Search Complaint No">
+    </div>
+  </div>
+
+  <div class="topbar-right">
+    <a href="staffDashboard.html" class="icon-btn">
+      <i class="fa-solid fa-house"></i>
+    </a>
+
+    
+
+  </div>
+
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <nav class="side-nav">
+      <a href="staffDashboard.html" class="side-link">Dashboard</a>
+      <a href="manage_complaint.html" class="side-link active">Manage Complaint</a>
+      <a href="manageFeedback.html" class="side-link">Manage Feedback</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+
+    <table class="complaint-table">
+      <thead>
+        <tr>
+          <!-- The complaint management table is structured to display a list of complaints, including details such as complaint number, student ID, subject, status, and an action column for managing each complaint. 
+          The JavaScript file manage_complaint.js is linked to handle the dynamic population of the table and any interactive functionality related to searching and managing complaints -->
+          <th>Complaint No</th>
+          <th>Student ID</th>
+          <th>Subject</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody id="complaintBody">
+
+      </tbody>
+    </table>
+
+  </main>
+</div>
+
+<script src="../javascript/manage_complaint.js"></script>
+</body>
+</html>

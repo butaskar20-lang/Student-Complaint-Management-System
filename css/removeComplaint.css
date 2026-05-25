@@ -1,0 +1,130 @@
+/* --- Glass Base Frame Overrides --- */
+.remove-management-card {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Action Control Row --- */
+.table-action-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 20px;
+}
+
+.mass-delete-btn {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    transition: background-color 0.2s, opacity 0.2s, transform 0.1s;
+}
+
+.mass-delete-btn:hover:not(:disabled) {
+    background-color: #c0392b;
+}
+
+.mass-delete-btn:disabled {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.4);
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.mass-delete-btn:active:not(:disabled) {
+    transform: scale(0.97);
+}
+
+.selection-counter {
+    font-size: 0.9rem;
+    color: #e0e8ff;
+    font-weight: 500;
+}
+
+/* --- Table Custom Redesign UI --- */
+.remove-complaints-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Separates the rows slightly for a card-row look */
+    text-align: left;
+}
+
+.remove-complaints-table th {
+    padding: 12px 20px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: none !important; /* !importtant to override any default table styles */
+}
+
+.remove-complaints-table tbody tr {
+    background: rgba(255, 255, 255, 0.08);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.remove-complaints-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.remove-complaints-table tbody tr.row-selected {
+    background: rgba(30, 131, 236, 0.25);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.remove-complaints-table td {
+    padding: 16px 20px;
+    font-size: 0.95rem;
+    color: #ffffff;
+    border: none !important;
+}
+
+/* Curve the left and right row edges */
+.remove-complaints-table tbody tr td:first-child {
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+.remove-complaints-table tbody tr td:last-child {
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+/* --- Form Field Checkboxes styling --- */
+.portal-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #0c2552;
+    transform: translateY(2px);
+}
+
+/* --- Clean Dashboard Status Rings --- */
+.status-ring {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin: 0 auto;
+    font-weight: 700;
+}

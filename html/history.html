@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint History</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/history.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="welcome-text">Welcome, <span>User!</span></div>
+        <div class="search-container">
+            <input type="text" id="historySearch" placeholder="Enter complaint No">
+            <button type="button"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="header-icons">
+            </a>
+            <a href="profile.html" class="profile-avatar-link" aria-label="User Profile">
+                <div class="profile-avatar"><i class="fa-solid fa-user"></i></div>
+            </a>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <nav>
+                <a href="userDashboard.html" class="nav-item">Dashboard</a>
+                <a href="removeComplaint.html" class="nav-item">Remove Complaint</a>
+                <a href="history.html" class="nav-item active">Complaint History</a>
+            </nav>
+        </aside>
+
+        <main class="content-space">
+            <div class="page-header">
+                <h2>Your Complaint History Log</h2>
+                <p>Track, manage, and verify the status of your reported campus incidents.</p>
+            </div>
+
+            <!-- The history table is designed to display a comprehensive log of the user's past complaints, 
+             including details such as complaint number, category, remarks, status, and options for submitting or updating feedback. 
+             The JavaScript file history.js is linked to handle the dynamic population of the table and any interactive functionality related to searching and managing complaint history -->
+            <div class="history-card">
+                <div class="table-responsive">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Complaint No</th>
+                                <th>Category</th>
+                                <th>Details & Remarks</th>
+                                <th>Status</th>
+                                <th>Submit Feedback</th>
+                                <th>Update Feedback</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyTableBody"></tbody>
+                    </table>
+                    <script src="../javascript/history.js"> </script>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+</body>
+</html>

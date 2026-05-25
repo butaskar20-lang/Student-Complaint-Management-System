@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+  	<div class="logo-title">
+      Technova Smart System | Intelligence Meets Infrastructure
+    </div>
+
+  </nav>
+
+  <!-- Main Container -->
+  <div class="main-container">
+
+		<!-- Left Section -->
+		<div class="left-section">
+			<img src="../assets/images/logo.png" alt="Logo" class="logo">
+      <h1>
+        Student Complaint <br>
+        Management System
+      </h1>
+
+    </div>
+
+    <!-- Right Section -->
+     <!-- The right section contains the login form, which includes input fields for the user ID and password, 
+      as well as buttons for submitting the login information and navigating to the registration page-->
+    <div class="right-section">
+      <h2>Welcome Back!</h2>
+      <form id="loginForm" action="../php/login.php" method="POST">
+        <div class="input-box">
+            <i class="bx bx-user"></i>
+            <input type="text"
+                   name="userid"
+                   placeholder="Enter ID"
+                   required>
+        </div>
+
+        <div class="input-box">
+          <i class="bx bx-lock-open"></i>
+          <input type="password"
+                 name="password"
+                 placeholder="Enter Password"
+                 required>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="main-btn">
+                  Login
+          </button>
+
+          <!-- CONNECT TO REGISTRATION PAGE -->
+           <!-- The Sign Up button is designed to redirect users to the registration page, allowing new users to create an account if they do not already have one. -->
+          <button type="button"
+                  class="main-btn"
+                  onclick="window.location.href='registration.html'">
+                  Sign Up
+					</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="../javascript/login.js" defer></script>
+</body>
+</html>

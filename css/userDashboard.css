@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #0d3875 0%, #1569c2 50%, #07172e 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Header Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 34, 64, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.welcome-text {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.welcome-text span {
+    font-weight: 700;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    width: 35%;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-btn {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+}
+
+.profile-avatar {
+    background-color: #ffffff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0c2552;
+}
+
+/* Layout Split */
+.main-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 200px;
+    background: rgba(21, 114, 211, 0.3);
+    padding-top: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-item {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.nav-item.active, .nav-item:hover {
+    background: linear-gradient(90deg, #1d8cf8, transparent);
+    border-left: 4px solid #fff;
+}
+
+/* Main Content Grid */
+.content-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+/* Action Cards */
+.action-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.action-card {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    min-width: 130px;
+}
+
+/* Custom Icons mimicking image graphics */
+.custom-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #0a2240;
+}
+
+.insert-icon {
+    border: 4px solid #0a2240;
+    font-size: 35px;
+}
+
+.insert-icon .exclamation {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    background: transparent;
+}
+
+.remove-icon {
+    border: 6px solid #000;
+    font-size: 40px;
+}
+
+.action-btn {
+    background-color: #0b3c77;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #1572d3;
+}
+
+.card-text p {
+    color: white;
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+

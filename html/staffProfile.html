@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Profile</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/staffProfile.css">
+</head>
+<body>
+
+<header class="profile-navbar">
+
+    <div class="welcome-text">
+        <a href="staffDashboard.html" class="back-dash-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Dashboard
+        </a>
+    </div>
+
+</header>
+
+<div class="profile-container">
+
+    <div class="profile-grid">
+
+        <div class="profile-sidebar-card">
+
+            <div class="avatar-container">
+                <div class="large-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+            <h2 id="summaryName"></h2>
+            <p class="student-id" id="staffID"></p>
+            <span class="status-badge active-status">Staff</span>
+
+        </div>
+
+        <div class="profile-details-card">
+
+            <h3>Personal details</h3>
+
+            <div class="info-group-grid">
+
+                <div class="info-item">
+                    <span class="info-label">Username</span>
+                    <p class="info-value" id="staffName"></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../javascript/staffProfile.js"></script>
+</body>
+</html>

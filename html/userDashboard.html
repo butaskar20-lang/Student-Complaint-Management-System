@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Complaint Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/userDashboard.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="welcome-text">Welcome, <span>User!</span></div>
+
+        <div class="header-icons">
+            <a href="profile.html" class="profile-avatar-link" aria-label="User Profile">
+                <div class="profile-avatar"><i class="fa-solid fa-user"></i></div>
+            </a>
+            <a href="../php/logout.php" class="icon-btn">
+                <i class="fa-solid fa-power-off"></i>
+            </a>
+        </div>
+
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <nav>
+                <a href="userDashboard.html" class="nav-item active">Dashboard</a>
+                
+                <a href="removeComplaint.html" class="nav-item">Remove Complaint</a>
+                
+                <a href="history.html" class="nav-item">Complaint History</a>
+                
+            </nav>
+        </aside>
+
+        <main class="content-grid">
+            <div class="action-column">
+
+                <div class="action-card">
+                    <div class="card-icon-wrapper">
+                        <div class="custom-icon insert-icon">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="exclamation">!</span>
+                        </div>
+                        <button class="action-btn" id="insertBtn">Insert</button>
+                    </div>
+
+                    <div class="card-text">
+                        <p>Students insert a new complaint report</p>
+                    </div>
+                </div>
+
+                <div class="action-card">
+                    <div class="card-icon-wrapper">
+
+                        <div class="custom-icon remove-icon">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+
+                        <a href="removeComplaint.html" style="text-decoration: none;">
+                            <button class="action-btn" id="removeBtn">Remove</button>
+                        </a>
+                    </div>
+
+                    <div class="card-text">
+                        <p>Students can remove a complaint</p>
+                    </div>
+
+                </div>
+               
+            </div>
+            
+        </main>
+    </div>
+
+    <script src="../javascript/userDashboard.js"></script>
+</body>
+</html>

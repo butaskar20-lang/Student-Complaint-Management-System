@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Complaint</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/complaint.css">
+</head>
+<body>
+    <header class="form-navbar">
+        <h1 class="page-title">Submit a Complaint</h1>
+        <div class="nav-links">
+            <a href="category.html" class="nav-link-btn">Back</a>
+            <a href="userDashboard.html" class="nav-link-btn">Home</a>
+        </div>
+    </header>
+
+    <!-- The main content area is structured as a form layout, allowing users to submit their complaints with a title, detailed description, and selected category -->
+    <main class="form-wrapper">
+        <div class="form-card">
+            <div class="category-badge">
+                Selected Category: <span id="chosenCategory"></span>
+            </div>
+
+            <form id="complaintForm" action="../php/complaint.php" method="POST">
+    
+                <input type="hidden" id="categoryName" name="categoryName">
+
+                <div class="form-group">
+                    <label for="complaintTitle">Complaint Title</label>
+                    <input type="text" id="complaintTitle" name="complaintTitle" placeholder="e.g., Timetable Clash with Core Subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="complaintDetails">Detailed Description</label>
+                    <textarea id="complaintDetails" name="complaintRemark" rows="6" placeholder="Provide as much detail as possible regarding the issue..." required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Submit Complaint</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- The JavaScript file complaint.js is linked at the end of the body to handle any interactive functionality related to the complaint submission process -->
+    <script src="../javascript/complaint.js"></script>
+</body>
+</html>

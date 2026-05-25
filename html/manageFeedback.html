@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Feedback</title>
+
+  <link rel="stylesheet" href="../css/staffDashboardstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-page">
+
+<header class="topbar">
+
+  <div class="topbar-left">
+    <span class="welcome-msg">Manage Feedback</span>
+  </div>
+
+  <div class="topbar-center">
+    <div class="search-box">
+      <input type="text" id="searchFeedback" placeholder="Search Feedback No">
+    </div>
+  </div>
+
+  <div class="topbar-right">
+    <a href="staffDashboard.html" class="icon-btn">
+      <i class="fa-solid fa-house"></i>
+    </a>
+  </div>
+
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <nav class="side-nav">
+      <a href="staffDashboard.html" class="side-link">Dashboard</a>
+      <a href="manage_complaint.html" class="side-link">Manage Complaint</a>
+      <a href="manageFeedback.html" class="side-link active">Manage Feedback</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+
+    <table class="feedback-table">
+      <thead>
+        <tr>
+          <!-- The feedback management table is structured to display a list of feedback entries, including details such as feedback number, complaint number, student ID, feedback content, and an action column for managing each feedback entry. 
+          The JavaScript file manageFeedback.js is linked to handle the dynamic population of the table and any interactive functionality related to searching and managing feedback -->
+          <th>Feedback No</th>
+          <th>Complaint No</th>
+          <th>Student ID</th>
+          <th>Feedback</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody id="feedbackBody">
+
+      </tbody>
+    </table>
+
+  </main>
+</div>
+
+<script src="../javascript/manageFeedback.js"></script>
+</body>
+</html>

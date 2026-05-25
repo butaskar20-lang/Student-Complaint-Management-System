@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Feedback</title>
+	
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<nav class="navbar">
+
+		<div class="logo-title">
+		We Value Your Feedback
+		</div>
+
+		<div class="nav-links">
+		<a href="history.html">Back</a>
+		<a href="userDashboard.html">Home</a>
+		</div>
+
+ 	</nav>
+
+	<div class="feedback-container">
+		<!-- The feedback form is structured to include a satisfaction rating section with emoji-based options and a comment section for additional feedback -->
+		<form action="../php/submit_feedback.php" method="POST">
+			
+			<input type="hidden" name="complaintNo" id="complaintNo">
+
+			<h2>1. How satisfied are you with the system?</h2>
+
+			<div class="rating-container">
+				
+				<!-- make emoji clickable and associated to the radio button-->
+				<label class="rating-card">
+					<input type="radio" name="satisfactionRating" value="1" required>
+					<span>😡</span>
+					<p>Very Dissatisfied</p>
+				</label>
+
+				<label class="rating-card">
+					<input type="radio" name="satisfactionRating" value="2">
+					<span>☹️</span>
+					<p>Dissatisfied</p>
+				</label>
+
+				<label class="rating-card">
+					<input type="radio" name="satisfactionRating" value="3">
+					<span>😐</span>
+					<p>Normal</p>
+				</label>
+
+				<label class="rating-card">
+					<input type="radio" name="satisfactionRating" value="4">
+					<span>😁</span>
+					<p>Satisfied</p>
+				</label>
+
+				<label class="rating-card">
+					<input type="radio" name="satisfactionRating" value="5">
+					<span>😄</span>
+					<p>Very Satisfied</p>
+				</label>
+
+			</div>
+	
+			<h2>2. Any additional comments or feedback?</h2>
+	
+			<textarea name="feedbackComment"
+					placeholder="Type your comments here..."
+					required>
+			</textarea>
+
+			<button type="submit" class="main-btn submit-btn"> Submit Feedback </button>
+
+		</form>
+	</div>
+	<!-- The JavaScript file script.js is linked at the end of the body to handle any interactive functionality related to the feedback submission process, 
+	 such as capturing the complaint number and passing it to the feedback form -->
+	<script src="../javascript/script.js"></script>
+</body>
+</html>

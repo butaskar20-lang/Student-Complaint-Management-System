@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Remove Complaint</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/history.css">
+    <link rel="stylesheet" href="../css/removeComplaint.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="welcome-text">Welcome, <span>User!</span></div>
+        <div class="search-container">
+            <input type="text" id="removeSearch" placeholder="Enter complaint No">
+            <button type="button"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="header-icons">
+            <a href="profile.html" class="profile-avatar-link" aria-label="User Profile">
+                <div class="profile-avatar"><i class="fa-solid fa-user"></i></div>
+            </a>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <nav>
+                <a href="userDashboard.html" class="nav-item">Dashboard</a>
+                
+                <a href="removeComplaint.html" class="nav-item active">Remove Complaint</a>
+                
+                <a href="history.html" class="nav-item">Complaint History</a>
+                
+            </nav>
+        </aside>
+
+        <main class="content-space">
+            <div class="page-header">
+                <h2>Remove Complaint</h2>
+                <p>Select and permanently drop pending or misreported logs from your account system tracking views.</p>
+            </div>
+
+            <div class="remove-management-card">
+                    
+                <div class="table-action-bar">
+                    <button type="button" class="mass-delete-btn" id="deleteSelectedBtn" disabled>
+                        <i class="fa-solid fa-trash-can"></i> Remove Selected
+                    </button>
+                    <span class="selection-counter" id="selectionCountText">No rows selected</span>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="remove-complaints-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px; text-align: center;">
+                                    <input type="checkbox" id="selectAllCheckbox" class="portal-checkbox">
+                                </th>
+                                <th>Complaint ID</th>
+                                <th>Category</th>
+                                <th>Date Logged</th>
+                                <th>Complaint Details</th>
+                                <th style="text-align: center;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="removeComplaintTableBody"></tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="../javascript/removeComplaint.js"></script>
+</body>
+</html>

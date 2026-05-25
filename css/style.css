@@ -1,0 +1,317 @@
+/* ================= GLOBAL ================= */
+
+/*Universal selector (*) targets EVERY HTML element on the page.*/
+*{
+    /*Removes default outer spacing automatically added by browsers.
+    Prevents random gaps around elements that may break layout alignment*/
+    margin:0;
+    /*Removes default inner spacing from all elements.
+    Creates predictable positioning for containers, buttons, and text*/
+    padding:0;
+    /*Forces width and height calculations to include padding and borders.*/
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*body targets the entire visible webpage.*/
+body{
+    background-image:url("../assets/images/background.png");
+
+    /* Expands image to cover the entire screen.
+        Makes the background responsive to different screen sizes*/
+    background-size:cover;
+    background-position:center;
+
+     /*Makes body height equal to full browser height
+        Ensures vertical centering works correctly*/
+    min-height:100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background:#0c2552;;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+
+    /*Centers content vertically
+        Creates balanced spacing regardless of monitor height*/
+    align-items:center;
+
+    padding:20px 60px;
+}
+
+.logo-title{
+    font-size:25px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:40px;
+    font-size:24px;
+}
+
+
+/* ================= MAIN CONTAINER ================= */
+
+.main-container{
+    width:85%;
+    margin:60px auto;
+
+    background:#89c4ef;
+
+    border-radius:50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:50px;
+}
+
+/* ================= LEFT SECTION ================= */
+
+.left-section{
+    width:45%;
+    text-align:center;
+}
+
+.logo{
+    width:180px;
+	height:180px;
+	border-radius:50%;
+	object-fit:cover; /* prevents stretching by cropping the image into a square */
+    margin-bottom:10px;
+}
+
+.left-section h1{
+    font-size:40px;
+    font-family:Georgia, serif;
+}
+
+/* ================= RIGHT SECTION ================= */
+
+.right-section{
+    width:45%;
+}
+
+.right-section h2{
+    font-size:35px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.input-box{
+	display:flex; /*enables flexbox layout-> to make the icons next to the text box*/
+	align-items:center; /*vertically centers icon with the text box*/
+	gap:10px; /*adds space between the icon and text box*/
+    margin-bottom:10px;
+}
+
+
+.input-box input{
+    width:100%;
+    padding:15px;
+
+    border:none;
+    border-radius:40px;
+
+    font-size:23px;
+}
+
+/* icons */
+.input-box i{
+	font-size:30px;	
+}
+
+/* registration page */
+/* '#'= id selector | '.'= class selector */
+#message h3{
+	font-size:14px;
+	margin-top: 10px;
+}
+
+#message p{
+	padding:10px 35px; /* indentation */
+	font-size:13px;
+	margin-bottom:-10px; /*make the line spacing more closer */
+}
+
+/* add green color text and a checkmark when the requirements are right */
+.valid{
+	color:#7FFFD4;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "/";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "X";
+}
+
+/* ================= BUTTONS ================= */
+
+.button-group{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+}
+
+.main-btn{
+    background:#0d3c8c;
+    color:white;
+
+    border:none;
+    border-radius:40px;
+
+
+    padding:15px 35px;
+    font-size:22px;
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.main-btn:hover{
+    background:#082861;
+}
+
+.forgot-text{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+/* ================= FEEDBACK PAGE ================= */
+
+.feedback-container{
+    width:70%;
+    margin:30px auto;
+
+    background:#89c4ef;
+    border-radius:40px;
+
+    padding:20px;
+}
+
+.feedback-container h2{
+    margin-bottom:30px;
+    font-size:20px;
+    color:white;
+}
+
+.rating-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+
+    margin-bottom:40px;
+}
+
+.rating-card{
+    background:#3d7bd9;
+
+    width:18%;
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    cursor:pointer;
+}
+
+.rating-card{
+	cursor:pointer;
+	font-size:32px;
+	padding:10px;
+	border:2px solid transparent;
+	border-radius:10px;
+	transition:all 0.2s;
+}
+
+.rating-card input[type="radio"]:checked{
+	background-color: #e0f7fa;
+	border-color:#00bcd4;
+	transform:scale(1.1);
+}
+
+.rating-card:hover{
+	background-color: #6495ED;
+}
+
+.rating-card span{
+    font-size:50px;
+}
+
+.rating-card p{
+    color:white;
+    font-size:20px;
+    margin-top:10px;
+}
+
+.rating-card input{
+    margin-top:15px;
+    transform:scale(2);
+}
+
+textarea{
+    width:100%;
+    height:150px;
+
+    border:none;
+    border-radius:25px;
+
+    padding:20px;
+
+    font-size:20px;
+
+    resize:none;
+}
+
+
+.submit-btn{
+    margin-top:30px;
+
+    padding:15px 35px;
+    font-size:22px;
+
+    display:block; /*change submit button to block-level element so can be centered*/
+    margin-left:auto; /*auto margins center properly with block elements*/
+    margin-right:auto;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .main-container{
+        flex-direction:column;
+    }
+
+    .left-section,
+    .right-section{
+        width:100%;
+    }
+
+    .rating-card{
+        width:45%;
+        margin-bottom:20px;
+    }
+
+}

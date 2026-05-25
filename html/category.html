@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a Category</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/category.css">
+</head>
+<body>
+    <header class="category-navbar">
+        <h1 class="page-title">Choose a category</h1>
+        <div class="nav-links">
+            <a href="userDashboard.html" class="nav-link-btn">Back</a>
+            <a href="userDashboard.html" class="nav-link-btn">Home</a>
+        </div>
+    </header>
+
+    <!-- The main content area is structured as a grid layout, containing four distinct category cards. Each card represents a different category of complaints that students can choose from when submitting their issues
+    -->   
+    <main class="grid-wrapper">
+        <section class="category-card">
+            <h2 class="card-title">Administrative Issues</h2>
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&auto=format&fit=crop&q=60" alt="Administrative Issues">
+            </div>
+            <ul class="bullet-list">
+                <li>Registration problems</li>
+                <li>Timetable clashes</li>
+                <li>Fees / payment issues</li>
+                <li>Documentation delays</li>
+            </ul>
+        </section>
+
+        <section class="category-card">
+            <h2 class="card-title">Facilities & Infrastructure</h2>
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&auto=format&fit=crop&q=60" alt="Facilities & Infrastructure">
+            </div>
+            <ul class="bullet-list">
+                <li>Classroom conditions</li>
+                <li>Wi-Fi / internet issues</li>
+                <li>Library services</li>
+                <li>Hostel / accommodation problems</li>
+            </ul>
+        </section>
+
+        <section class="category-card">
+            <h2 class="card-title">Discipline & Behavior</h2>
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&auto=format&fit=crop&q=60" alt="Discipline & Behavior">
+            </div>
+            <ul class="bullet-list">
+                <li>Student misconduct</li>
+                <li>Bullying or harassment</li>
+                <li>Lecturer/staff behavior</li>
+            </ul>
+        </section>
+
+        <section class="category-card">
+            <h2 class="card-title">IT & System Issues</h2>
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&auto=format&fit=crop&q=60" alt="IT & System Issues">
+            </div>
+            <ul class="bullet-list">
+                <li>Portal login problems</li>
+                <li>System errors</li>
+                <li>Online learning platform issues</li>
+            </ul>
+        </section>
+    </main>
+    <!-- The JavaScript file category.js is linked at the end of the body to handle any interactive functionality related to the category selection process, 
+    such as capturing the selected category and passing it to the complaint submission form -->
+    <script src="../javascript/category.js"></script>
+</body>
+</html>

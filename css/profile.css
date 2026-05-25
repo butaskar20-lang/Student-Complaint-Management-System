@@ -1,0 +1,203 @@
+/* --- Base Reset & Background Framework --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    background: linear-gradient(135deg, #0f367a 0%, #145cc2 50%, #1e83ec 100%) !important;
+    background-attachment: fixed !important;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+/* --- Dark Top Header Navigation --- */
+.profile-navbar {
+    background-color: #0c2552;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.back-dash-btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.2s;
+}
+
+.back-dash-btn:hover {
+    opacity: 0.8;
+}
+
+.icon-link {
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.icon-link:hover {
+    transform: scale(1.1);
+}
+
+/* --- Layout Container System --- */
+.profile-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px 80px 20px;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Shared Glassmorphism Design Elements --- */
+.profile-sidebar-card, .profile-details-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 40px 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Left Profile Card Layout --- */
+.profile-sidebar-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.avatar-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.large-avatar {
+    width: 130px;
+    height: 130px;
+    background-color: #ffffff;
+    color: #0c2552;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-sidebar-card h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.student-id {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+
+.active-status {
+    background-color: rgba(46, 204, 113, 0.25);
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+}
+
+/* --- Right Profile Details Layout --- */
+.profile-details-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 12px;
+}
+
+.info-group-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 20px;
+    margin-bottom: 35px;
+}
+
+@media (max-width: 550px) {
+    .info-group-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    color: #e0e0e0;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+/* --- Action Button Control System --- */
+.profile-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-profile-btn {
+    background-color: #0c2552;
+    color: #ffffff;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.edit-profile-btn:hover {
+    background-color: #05132d;
+}
+
+.edit-profile-btn:active {
+    transform: scale(0.97);
+}

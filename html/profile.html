@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <header class="profile-navbar">
+        <div class="welcome-text">
+            <a href="userDashboard.html" class="back-dash-btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+    </header>
+
+    <!-- The profile page is designed to display the user's personal information in a structured layout, including an avatar, student ID, and contact details. 
+     The JavaScript file profile.js is linked to handle the dynamic retrieval and display of the user's profile information from the server. -->
+    <div class="profile-container">
+        <div class="profile-grid">
+            <div class="profile-sidebar-card">
+                <div class="avatar-container">
+                    <div class="large-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+                <p class="student-id">ID: <span id="studentID"></span></p>
+                <span class="status-badge active-status">Active Student</span>
+            </div>
+
+            <div class="profile-details-card">
+                <h3>Personal details</h3>
+                
+                <div class="info-group-grid">
+                    <div class="info-item">
+                        <span class="info-label">Full Name</span>
+                        <p class="info-value" id="stuName"></p>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Email Address</span>
+                        <p class="info-value" id="stuEmail"></p>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">Contact Number</span>
+                        <p class="info-value" id="stuContactNum"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/profile.js"></script>
+</body>
+</html>
