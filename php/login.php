@@ -97,7 +97,7 @@
 				//converts returned row into array
 				$staffRow = mysqli_fetch_assoc($staffResult);
 
-				// verifies staff password with hashed staff pswd
+				// verifies staff password with staff pswd in the database
 				if($password == $staffRow["staffPassword"]){
 
 					// stores logged in staff ID into session
