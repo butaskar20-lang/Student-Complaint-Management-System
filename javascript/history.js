@@ -157,11 +157,13 @@ function renderTable(data){
 /* fetch complaint history from php backend */
 fetch("../php/getComplaintHistory.php")
 
+// converts response to text
 .then(function(response){
 
     return response.text();
 })
 
+// processes the fetched data
 .then(function(data){
 
     if(data.trim() == ""){
@@ -171,8 +173,11 @@ fetch("../php/getComplaintHistory.php")
         return;
     }
 
-    const rows =
-        data.trim().split("\n");
+    // splits the fetched data into rows based on newline characters and 
+    // then maps each row to a complaint object with properties
+    //  which are extracted by splitting each row using the pipe character as a delimiter
+    // then it calls the renderTable function to display the complaint history in the table.
+    const rows = data.trim().split("\n");
 
     /* converts php rows into javascript objects */
     complaintData = rows.map(function(row){
